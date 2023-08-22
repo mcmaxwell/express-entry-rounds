@@ -1,13 +1,11 @@
 import React from 'react'
 
-export const RoundList = (roundsList) => {
-    const rounds = roundsList.list
-    console.log(typeof rounds)
+export const RoundList = ({ list }) => {
     return (
         <>
             <h1>Rounds Express Entry</h1>
             <div className='round-list'>
-                {rounds.map((item) => (
+                {list.map((item) => (
                     <div
                         className='round-item'
                         key={item.drawNumber}
