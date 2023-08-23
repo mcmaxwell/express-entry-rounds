@@ -5,6 +5,12 @@ export const RoundList = ({ list }) => {
         <>
             <h1>Rounds Express Entry</h1>
             <div className='round-list'>
+                <div className='round-item head'>
+                    <div className='round-number'>#</div>
+                    <div className='round-date'>Date</div>
+                    <div className='round-crs'>CRS score</div>
+                    <div className='round-program'>Round type</div>
+                </div>
                 {list.map((item) => (
                     <div
                         className='round-item'
