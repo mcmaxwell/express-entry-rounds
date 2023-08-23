@@ -10,8 +10,6 @@ function App() {
     const [response, setResponse] = useState([])
     const [isLoading, setLoading] = useState(true)
 
-    const cookieKey = 'responseCookie'
-
     const fetchResponseData = async () => {
         try {
             const apiResponse = await fetch(
@@ -23,14 +21,6 @@ function App() {
             }
 
             const jsonData = await apiResponse.json()
-
-            // Compare and update the cookie if the response has changed
-            const existingResponse = Cookies.get(cookieKey)
-            const newResponseString = JSON.stringify(jsonData.rounds)
-
-            if (existingResponse !== newResponseString) {
-                Cookies.set(cookieKey, newResponseString)
-            }
 
             setLoading(false)
 

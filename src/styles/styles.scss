@@ -151,6 +151,12 @@ table {
             white-space: nowrap;
         }
     }
+
+    &.head {
+        position: sticky;
+        top: 0;
+        background: #fff;
+    }
 }
 
 h1 {
