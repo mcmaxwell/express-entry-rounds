@@ -9,6 +9,7 @@ export const RoundList = ({ list }) => {
                     <div className='round-number'>#</div>
                     <div className='round-date'>Date</div>
                     <div className='round-crs'>CRS score</div>
+                    <div className='round-size'>Round size</div>
                     <div className='round-program'>Round type</div>
                 </div>
                 {list.map((item) => (
@@ -19,6 +20,7 @@ export const RoundList = ({ list }) => {
                         <div className='round-number'>{item.drawNumber}</div>
                         <div className='round-date'>{item.drawDateFull}</div>
                         <div className='round-crs'>{item.drawCRS}</div>
+                        <div className='round-size'>{item.drawSize}</div>
                         <div className='round-program'>{item.drawName}</div>
                     </div>
                 ))}
